@@ -1,0 +1,212 @@
+.cart {
+  font-size: $fontSizemd;
+  background-color: $rose50;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 4rem;
+  pointer-events: all;
+
+  @include breakpoints-down(small) {
+    width: 95%;
+    margin: 0;
+  }
+
+  @include breakpoints-up(medium) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include breakpoints-up(large) {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    background-color: $rose100;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 3rem 0;
+  }
+  &-empty-icon {
+    margin-bottom: 2rem;
+  }
+
+  border-radius: 1rem;
+  // width: 20rem;
+  &-title {
+    color: $red;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  &-empty-text {
+    font-size: 1.4rem;
+    color: $rose500;
+    font-weight: 600;
+  }
+
+  &-content {
+    flex: 1;
+  }
+
+  &-item {
+    text-align: left;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $rose100;
+    margin-bottom: 1.5rem;
+    display: flex;
+    // justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+    &-name {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $rose900;
+    }
+
+    &-quantity {
+      color: $red;
+    }
+    &-price {
+      color: $rose400;
+    }
+    &-curprice {
+      color: $rose500;
+    }
+  }
+
+  &-custom {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid hsl(13, 19%, 91%);
+  }
+
+  &-price-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  &-delete {
+    border: 1px solid $rose400;
+    cursor: pointer;
+
+    &:hover svg path {
+      fill: $rose900;
+      stroke: none;
+    }
+
+    &:hover,
+    &:active {
+      border-color: $rose900;
+    }
+  }
+
+  &-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+    &-custom {
+      margin: 2rem 0 0;
+    }
+    & p {
+      font-size: 1.4rem;
+      color: $rose900;
+    }
+  }
+
+  &-carbon-neutral {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background-color: $rose100;
+    padding: 1.5rem 2rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  & .strong {
+    font-weight: 600;
+  }
+
+  &-btn-confirm-order {
+    background-color: $red;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    color: $rose50;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      background-color: hsl(14, 87%, 28%);
+    }
+  }
+}
+
+.confirm-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  pointer-events: none;
+
+  @include breakpoints-down(small) {
+    align-items: flex-end;
+  }
+}
+
+.overlay {
+  position: absolute;
+  background-color: #0000004b;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+  // z-index: 1000;
+  opacity: 0;
+  backdrop-filter: blur(0);
+  transition: opacity 5s ease, backdrop-filter 5s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  backdrop-filter: blur(1px);
+}
+
+.custom-class {
+  width: 50rem;
+  z-index: 1000;
+}
+
+.order-confirmed {
+  text-align: left;
+  & svg {
+    margin-bottom: 1.5rem;
+  }
+  & h2 {
+    margin-bottom: 0.5rem;
+    font-size: $fontSizelg;
+  }
+  & p {
+    font-size: $fontSizesm;
+  }
+}
+
+.order-img {
+  width: 5rem;
+  border-radius: 0.5rem;
+}
+
+.curprice {
+  font-size: $fontSizesm;
+  font-weight: 600;
+  color: $rose900;
+}

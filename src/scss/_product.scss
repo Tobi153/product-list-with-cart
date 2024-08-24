@@ -1,0 +1,182 @@
+.product {
+  // &-container {
+  //   width: 100%;
+  // }
+  &-item {
+    width: 40rem;
+    position: relative;
+    margin-bottom: 3rem;
+    font-size: $fontSizemd;
+    // @include breakpoints-down(large) {
+    //   width: 35rem;
+    // }
+    // @include breakpoints-down(medium) {
+    //   width: 28rem;
+    // }
+    // @include breakpoints-up(medium) {
+    //   width: 33rem;
+    // }
+    @include breakpoints-down(small) {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    @include breakpoints-up(medium) {
+      width: 28rem;
+    }
+
+    @include breakpoints-up(large) {
+      width: 33rem;
+    }
+
+    @include breakpoints-up(large) {
+      width: 35rem;
+    }
+
+    @include breakpoints-up(xlarge) {
+      width: 40rem;
+    }
+
+    // @include breakpoints-up(large) {
+    //   width: 40rem;
+    // }
+
+    & .selected {
+      color: $rose50;
+      background-color: $red;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $red;
+
+      &:hover,
+      &:active {
+        color: $rose50;
+      }
+    }
+
+    & .active {
+      border: 2px solid $red;
+    }
+  }
+  &-button {
+    font-weight: 600;
+    width: 20rem;
+    height: 2rem;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    border-radius: 5rem;
+    background-color: $rose50;
+    border: 1px solid $rose500;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    bottom: 8.5rem;
+    left: 50%;
+    transform: translateX(-63%);
+
+    @include breakpoints-down(small) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include breakpoints-up(medium) {
+      left: 50%;
+      transform: translateX(-57%);
+    }
+    // @include breakpoints-down(medium) {
+    //   left: 50%;
+    //   transform: translateX(-55%);
+    // }
+    &:hover,
+    &:active {
+      border: 1px solid $red;
+      color: $red;
+    }
+  }
+  &-img {
+    width: 35rem;
+    height: 35rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    border: 3px solid $rose100;
+
+    // @include breakpoints-down(large) {
+    //   width: 30rem;
+    //   height: 30rem;
+    // }
+
+    // @include breakpoints-down(medium) {
+    //   width: 25rem;
+    //   height: 25rem;
+    // }
+
+    @include breakpoints-down(small) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include breakpoints-up(medium) {
+      width: 25rem;
+      height: 25rem;
+    }
+
+    @include breakpoints-up(large) {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    @include breakpoints-up(large) {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    @include breakpoints-up(xlarge) {
+      width: 35rem;
+      height: 35rem;
+    }
+
+    // @include breakpoints-up(medium) {
+    //   width: 30rem;
+    //   height: 30rem;
+    // }
+    // @include breakpoints-up(large) {
+    //   width: 35rem;
+    //   height: 35rem;
+    // }
+  }
+
+  &-description {
+    width: 100%;
+  }
+  &-category {
+    color: $rose400;
+    font-size: 1.4rem;
+  }
+  &-name {
+    font-weight: 600;
+    color: $rose900;
+  }
+  &-price {
+    color: $red;
+    font-weight: 700;
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid $rose50;
+    border-radius: 50%;
+
+    &:hover svg path,
+    &:active svg path {
+      fill: $red;
+      stroke: none;
+    }
+    &:hover,
+    &:active {
+      background-color: $rose50;
+    }
+  }
+}
