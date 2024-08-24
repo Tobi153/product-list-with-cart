@@ -180,7 +180,7 @@ ul {
   position: absolute;
   bottom: 8.5rem;
   left: 50%;
-  transform: translateX(-63%);
+  transform: translateX(-50%);
 }
 @media (max-width: 40em) {
   .product-button {
@@ -192,6 +192,11 @@ ul {
   .product-button {
     left: 50%;
     transform: translateX(-57%);
+  }
+}
+@media (min-width: 90.0625em) {
+  .product-button {
+    transform: translateX(-61%);
   }
 }
 .product-button:hover, .product-button:active {

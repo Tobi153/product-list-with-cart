@@ -73,7 +73,7 @@
     position: absolute;
     bottom: 8.5rem;
     left: 50%;
-    transform: translateX(-63%);
+    transform: translateX(-50%);
 
     @include breakpoints-down(small) {
       left: 50%;
@@ -82,6 +82,9 @@
     @include breakpoints-up(medium) {
       left: 50%;
       transform: translateX(-57%);
+    }
+    @include breakpoints-up(xlarge) {
+      transform: translateX(-61%);
     }
     // @include breakpoints-down(medium) {
     //   left: 50%;
