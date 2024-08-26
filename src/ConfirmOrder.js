@@ -15,7 +15,7 @@ export default function ConfirmOrder({
         className={`overlay ${isVisible ? "show" : ""}`}
         onClick={onVisibility}
       ></div>
-      <div className="confirm-order">
+      <div className={`confirm-order ${isVisible ? "show" : ""}`}>
         <SideBar
           itemData={itemData}
           selectedItems={selectedItems}

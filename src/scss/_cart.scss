@@ -7,7 +7,7 @@
   pointer-events: all;
 
   @include breakpoints-down(small) {
-    width: 95%;
+    width: 100%;
     margin: 0;
   }
 
@@ -16,7 +16,7 @@
     margin: 0 auto;
   }
   @include breakpoints-up(large) {
-    width: 100%;
+    width: 40rem;
     margin: 0 auto;
   }
 
@@ -155,7 +155,6 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  cursor: pointer;
   pointer-events: none;
 
   @include breakpoints-down(small) {
@@ -183,6 +182,11 @@
 
 .custom-class {
   width: 50rem;
+  @include breakpoints-down(small) {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   z-index: 1000;
 }
 
