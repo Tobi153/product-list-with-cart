@@ -137,6 +137,8 @@
     border-radius: 5rem;
     color: $rose50;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:hover,
     &:active {

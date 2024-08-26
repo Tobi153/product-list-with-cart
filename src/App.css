@@ -407,6 +407,8 @@ ul {
   border-radius: 5rem;
   color: hsl(20, 50%, 98%);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .cart-btn-confirm-order:hover, .cart-btn-confirm-order:active {
   background-color: hsl(14, 87%, 28%);
